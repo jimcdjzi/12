@@ -36,3 +36,8 @@ node server.mjs
 - `vercel.json`：Vercel 部署配置
 
 请确认你有权使用和公开展示上游内容，并遵守上游服务规则。
+
+
+## 星灯小屋 · 塔罗应用
+
+本仓库的塔罗项目位于 [starlit-cabin/](starlit-cabin/README.md)：全屏 Three.js 小屋、78 张随机抽牌、原书 RAG 与 DeepSeek 综合解读。安装、密钥配置与本地资料导入步骤见该目录说明。

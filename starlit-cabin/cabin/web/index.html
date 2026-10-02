@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10131e"><title>星灯小屋 · 给心事一点月光</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/immersive.css"><script type="module" src="/app.js"></script>
+</head>
+<body data-stage="home">
+  <header class="masthead"><a class="brand" href="/" aria-label="星灯小屋首页"><span class="brand-star">✧</span><span>星灯小屋<small>THE STARLIT CABIN</small></span></a><nav aria-label="小屋功能"><button id="library-button">牌义藏书</button><button id="history-button">我的手记</button><button id="sound-button" aria-pressed="false" title="开启环境音">♫ <span>静音</span></button></nav></header>
+  <main>
+    <button class="scene-back" id="scene-back" hidden>↖ 回到小屋</button>
+    <div class="journey-guide" id="journey-guide"><span>YOUR PRIVATE RITUAL</span><p id="journey-title">先让水晶球听见你的心事</p><small id="journey-subtitle">循着微光，轻触水晶球</small></div>
+    <button class="object-guide" id="object-guide" data-object="crystal">水晶球 · 从这里开始</button>
+    <div class="ready-action" id="ready-action" hidden><p>心事已经安放，接下来交给直觉。</p><button id="open-deck">轻触桌上的塔罗牌，展开 78 张牌 ↗</button></div>
+    <section class="room" aria-label="可以探索的占卜小屋">
+      <div class="room-intro"><span class="eyebrow">A QUIET MOMENT, JUST FOR YOU</span><h1>给心事，<br>一点月光。</h1><p>推开门，暂且把喧嚣留在外面。<br>在牌与光之间，听见自己的答案。</p></div>
+      <canvas id="scene" aria-label="三维小屋：月窗、书架、烛台与占卜桌"></canvas>
+      <div id="scene-fallback" hidden><div class="fallback-moon">☾</div><p>月光已为你留好位置</p></div>
+      <div class="room-locations" aria-label="小屋物件"><button data-object="crystal"><span>◈</span>水晶球<small>安放问题</small></button><button data-object="deck"><span>▱</span>塔罗牌<small>开启抽牌</small></button><button data-object="books"><span>▤</span>藏书架<small>翻阅牌义</small></button><button data-object="journal"><span>◇</span>旧手记<small>回看心事</small></button><button data-object="candle"><span>♧</span>烛台<small>环境声音</small></button></div>
+      <div class="room-caption"><span class="live-dot"></span> 月光长明 · 小屋为你而开 <span class="scene-hint">点击物件，慢慢探索</span></div>
+    </section>
+    <aside class="journal-panel">
+      <div class="panel-top"><span class="eyebrow">YOUR LITTLE RITUAL</span><span class="moon-mark">☽</span></div>
+      <ol class="steps" aria-label="占卜步骤"><li class="active" id="step-1">01 安放心事</li><li id="step-2">02 凭心选牌</li><li id="step-3">03 读懂启示</li></ol>
+      <section id="question-view">
+        <h2>今夜，想聊些什么？</h2><p class="muted">一个真诚的问题，是旅程的开始。</p>
+        <form id="question-form">
+          <label for="question">写下此刻的心事 <span id="char-count">0 / 300</span></label>
+          <textarea id="question" required minlength="4" maxlength="300" placeholder="例如：面对最近的工作变化，我可以如何找到自己的方向？"></textarea>
+          <div class="suggestions"><button type="button" data-question="面对最近的工作变化，我可以如何找到自己的方向？">工作与方向</button><button type="button" data-question="在目前的关系里，我可以如何更好地表达自己？">关系与相处</button><button type="button" data-question="此刻的我，需要留意自己的哪些感受？">认识自己</button></div>
+          <fieldset><legend>选择你的牌阵</legend><label class="spread-option"><input type="radio" name="spread" value="single"><span class="spread-icon">▯</span><span><strong>一念 · 单张牌</strong><small>给此刻一个轻轻的提醒</small></span><span class="radio-mark"></span></label><label class="spread-option"><input type="radio" name="spread" value="three" checked><span class="spread-icon">▯▯▯</span><span><strong>回响 · 三张牌</strong><small>过去的影响 / 当下 / 可尝试的方向</small></span><span class="radio-mark"></span></label></fieldset>
+          <button type="submit" class="primary" id="begin-button">安放心事，走向牌桌 <span>↗</span></button>
+        </form>
+        <p class="ritual-note">✧ &nbsp; 78 张牌，正逆位随机，等待你的选择</p>
+        <div class="panel-divider"><span>✦</span></div><p class="footnote">牌是映照内心的一面镜子。<br>仅供娱乐与自我探索，你始终拥有选择的自由。</p>
+      </section>
+      <section id="draw-view" hidden><span class="eyebrow">FOLLOW YOUR INTUITION</span><h2 id="draw-title">让直觉带路</h2><p id="draw-question" class="quoted"></p><p id="draw-instruction" class="muted"></p><div id="draw-slots" class="draw-slots"></div><div class="deck-heading"><span>轻触一张与你有缘的牌</span><span id="deck-page"></span></div><div id="card-fan" class="card-fan"></div><div class="deck-navigation"><button id="deck-prev" class="text-button">← 前一叠</button><button id="deck-next" class="text-button">后一叠 →</button></div><div id="interpret-area" hidden><button class="primary" id="interpret-button">翻开这一次的启示 <span>✦</span></button><p id="interpret-status" class="muted" role="status"></p></div><button class="text-button restart">重新安放心事</button></section>
+      <section id="reading-view" hidden><span class="eyebrow">A LETTER FROM THE CARDS</span><h2>这一刻，牌想说</h2><p id="reading-question" class="quoted"></p><div id="reading-cards" class="reading-cards"></div><div class="reading-summary"><h3>留给你的思考</h3><p id="reading-summary"></p></div><p id="reading-note" class="footnote"></p><details class="audit"><summary>查看抽牌记录与校验</summary><p id="audit-result"></p><code id="audit-hash"></code></details><button class="primary restart">再留一盏灯 <span>↗</span></button></section>
+      <p id="notice" class="notice" role="alert" hidden></p>
+      <footer class="panel-footer"><span>✧ 源自《其实你已经很塔罗了》</span><span id="connection">正在连接小屋</span></footer>
+    </aside>
+  </main>
+  <dialog id="welcome-modal"><form id="welcome-form"><span class="eyebrow">WELCOME TO THE STARLIT CABIN</span><div class="welcome-orbit">☾</div><h2>旅人，该怎么称呼你？</h2><p class="muted">留一个喜欢的称呼，让这盏灯为你亮起。</p><label for="visitor-name">你的称呼</label><input id="visitor-name" maxlength="20" autocomplete="nickname" placeholder="例如：小月" required><button class="primary" type="submit">走进星灯小屋 <span>✧</span></button><button type="button" id="welcome-skip" class="text-button">就叫我「旅人」吧</button><p class="footnote">称呼仅保存在这个浏览器中。</p></form></dialog>
+  <dialog id="library-modal"><div class="modal-heading"><div><span class="eyebrow">THE LITTLE LIBRARY</span><h2>翻一页，认识一张牌</h2></div><button class="close" aria-label="关闭藏书" data-close="library-modal">×</button></div><form id="library-form" class="search-form"><input id="library-query" maxlength="100" placeholder="搜索牌名或牌义，例如：愚人逆位" aria-label="搜索牌义" required><button class="primary">查阅</button></form><div class="library-presets"><button data-search="愚人">愚人</button><button data-search="女祭司">女祭司</button><button data-search="圣杯二">圣杯二</button><button data-search="倒立牌的意义">如何理解逆位</button></div><div id="library-result" class="library-result" aria-live="polite"><p class="muted">书架收藏了 78 张牌的故事。输入牌名，查看原书中的解释与出处。</p></div></dialog>
+  <dialog id="history-modal"><div class="modal-heading"><div><span class="eyebrow">YOUR PRIVATE JOURNAL</span><h2>那些与自己相遇的夜晚</h2></div><button class="close" aria-label="关闭手记" data-close="history-modal">×</button></div><p class="muted">此浏览器保留最近 30 次记录的入口。</p><div id="history-list"></div><button class="text-button" id="clear-history">清空此浏览器的记录入口</button></dialog>
+</body></html>

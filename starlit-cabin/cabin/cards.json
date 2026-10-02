@@ -1,0 +1,938 @@
+[
+  {
+    "id": "card-00",
+    "name": "权杖王牌",
+    "section": "权杖王牌",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "王牌"
+    },
+    "image": "/assets/cards/card-00.jpg",
+    "page": 9
+  },
+  {
+    "id": "card-01",
+    "name": "权杖二",
+    "section": "权杖二",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "二"
+    },
+    "image": "/assets/cards/card-01.jpg",
+    "page": 11
+  },
+  {
+    "id": "card-02",
+    "name": "权杖三",
+    "section": "权杖三",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "三"
+    },
+    "image": "/assets/cards/card-02.jpg",
+    "page": 12
+  },
+  {
+    "id": "card-03",
+    "name": "权杖四",
+    "section": "权杖四",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "四"
+    },
+    "image": "/assets/cards/card-03.jpg",
+    "page": 13
+  },
+  {
+    "id": "card-04",
+    "name": "权杖五",
+    "section": "权杖五",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "五"
+    },
+    "image": "/assets/cards/card-04.jpg",
+    "page": 14
+  },
+  {
+    "id": "card-05",
+    "name": "权杖六",
+    "section": "权杖六",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "六"
+    },
+    "image": "/assets/cards/card-05.jpg",
+    "page": 15
+  },
+  {
+    "id": "card-06",
+    "name": "权杖七",
+    "section": "权杖七",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "七"
+    },
+    "image": "/assets/cards/card-06.jpg",
+    "page": 17
+  },
+  {
+    "id": "card-07",
+    "name": "权杖八",
+    "section": "权杖八",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "八"
+    },
+    "image": "/assets/cards/card-07.jpg",
+    "page": 18
+  },
+  {
+    "id": "card-08",
+    "name": "权杖九",
+    "section": "权杖九",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "九"
+    },
+    "image": "/assets/cards/card-08.jpg",
+    "page": 19
+  },
+  {
+    "id": "card-09",
+    "name": "权杖十",
+    "section": "权杖十",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "十"
+    },
+    "image": "/assets/cards/card-09.jpg",
+    "page": 21
+  },
+  {
+    "id": "card-10",
+    "name": "权杖侍卫",
+    "section": "权杖侍卫",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "侍卫"
+    },
+    "image": "/assets/cards/card-10.jpg",
+    "page": 22
+  },
+  {
+    "id": "card-11",
+    "name": "权杖骑士",
+    "section": "权杖骑士",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "骑士"
+    },
+    "image": "/assets/cards/card-11.jpg",
+    "page": 23
+  },
+  {
+    "id": "card-12",
+    "name": "权杖皇后",
+    "section": "权杖皇后",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "皇后"
+    },
+    "image": "/assets/cards/card-12.jpg",
+    "page": 25
+  },
+  {
+    "id": "card-13",
+    "name": "权杖国王",
+    "section": "权杖国王",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "权杖",
+      "rank": "国王"
+    },
+    "image": "/assets/cards/card-13.jpg",
+    "page": 26
+  },
+  {
+    "id": "card-14",
+    "name": "圣杯王牌",
+    "section": "圣杯王牌",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "王牌"
+    },
+    "image": "/assets/cards/card-14.jpg",
+    "page": 34
+  },
+  {
+    "id": "card-15",
+    "name": "圣杯二",
+    "section": "圣杯二",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "二"
+    },
+    "image": "/assets/cards/card-15.jpg",
+    "page": 35
+  },
+  {
+    "id": "card-16",
+    "name": "圣杯三",
+    "section": "圣杯三",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "三"
+    },
+    "image": "/assets/cards/card-16.jpg",
+    "page": 37
+  },
+  {
+    "id": "card-17",
+    "name": "圣杯四",
+    "section": "圣杯四",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "四"
+    },
+    "image": "/assets/cards/card-17.jpg",
+    "page": 38
+  },
+  {
+    "id": "card-18",
+    "name": "圣杯五",
+    "section": "圣杯五",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "五"
+    },
+    "image": "/assets/cards/card-18.jpg",
+    "page": 40
+  },
+  {
+    "id": "card-19",
+    "name": "圣杯六",
+    "section": "圣杯六",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "六"
+    },
+    "image": "/assets/cards/card-19.jpg",
+    "page": 41
+  },
+  {
+    "id": "card-20",
+    "name": "圣杯七",
+    "section": "圣杯七",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "七"
+    },
+    "image": "/assets/cards/card-20.jpg",
+    "page": 43
+  },
+  {
+    "id": "card-21",
+    "name": "圣杯八",
+    "section": "圣杯八",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "八"
+    },
+    "image": "/assets/cards/card-21.jpg",
+    "page": 44
+  },
+  {
+    "id": "card-22",
+    "name": "圣杯九",
+    "section": "圣杯九",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "九"
+    },
+    "image": "/assets/cards/card-22.jpg",
+    "page": 46
+  },
+  {
+    "id": "card-23",
+    "name": "圣杯十",
+    "section": "圣杯十",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "十"
+    },
+    "image": "/assets/cards/card-23.jpg",
+    "page": 47
+  },
+  {
+    "id": "card-24",
+    "name": "圣杯侍卫",
+    "section": "圣杯侍卫",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "侍卫"
+    },
+    "image": "/assets/cards/card-24.jpg",
+    "page": 48
+  },
+  {
+    "id": "card-25",
+    "name": "圣杯骑士",
+    "section": "圣杯骑士",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "骑士"
+    },
+    "image": "/assets/cards/card-25.jpg",
+    "page": 49
+  },
+  {
+    "id": "card-26",
+    "name": "圣杯皇后",
+    "section": "圣杯皇后",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "皇后"
+    },
+    "image": "/assets/cards/card-26.jpg",
+    "page": 51
+  },
+  {
+    "id": "card-27",
+    "name": "圣杯国王",
+    "section": "圣杯国王",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "圣杯",
+      "rank": "国王"
+    },
+    "image": "/assets/cards/card-27.jpg",
+    "page": 52
+  },
+  {
+    "id": "card-28",
+    "name": "宝剑王牌",
+    "section": "宝剑王牌",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "王牌"
+    },
+    "image": "/assets/cards/card-28.jpg",
+    "page": 58
+  },
+  {
+    "id": "card-29",
+    "name": "宝剑二",
+    "section": "宝剑二",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "二"
+    },
+    "image": "/assets/cards/card-29.jpg",
+    "page": 59
+  },
+  {
+    "id": "card-30",
+    "name": "宝剑三",
+    "section": "宝剑三",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "三"
+    },
+    "image": "/assets/cards/card-30.jpg",
+    "page": 60
+  },
+  {
+    "id": "card-31",
+    "name": "宝剑四",
+    "section": "宝剑四",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "四"
+    },
+    "image": "/assets/cards/card-31.jpg",
+    "page": 62
+  },
+  {
+    "id": "card-32",
+    "name": "宝剑五",
+    "section": "宝剑五",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "五"
+    },
+    "image": "/assets/cards/card-32.jpg",
+    "page": 63
+  },
+  {
+    "id": "card-33",
+    "name": "宝剑六",
+    "section": "宝剑六",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "六"
+    },
+    "image": "/assets/cards/card-33.jpg",
+    "page": 65
+  },
+  {
+    "id": "card-34",
+    "name": "宝剑七",
+    "section": "宝剑七",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "七"
+    },
+    "image": "/assets/cards/card-34.jpg",
+    "page": 66
+  },
+  {
+    "id": "card-35",
+    "name": "宝剑八",
+    "section": "宝剑八",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "八"
+    },
+    "image": "/assets/cards/card-35.jpg",
+    "page": 67
+  },
+  {
+    "id": "card-36",
+    "name": "宝剑九",
+    "section": "宝剑九",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "九"
+    },
+    "image": "/assets/cards/card-36.jpg",
+    "page": 69
+  },
+  {
+    "id": "card-37",
+    "name": "宝剑十",
+    "section": "宝剑十",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "十"
+    },
+    "image": "/assets/cards/card-37.jpg",
+    "page": 70
+  },
+  {
+    "id": "card-38",
+    "name": "宝剑侍卫",
+    "section": "宝剑侍卫",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "侍卫"
+    },
+    "image": "/assets/cards/card-38.jpg",
+    "page": 71
+  },
+  {
+    "id": "card-39",
+    "name": "宝剑骑士",
+    "section": "宝剑骑士",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "骑士"
+    },
+    "image": "/assets/cards/card-39.jpg",
+    "page": 73
+  },
+  {
+    "id": "card-40",
+    "name": "宝剑皇后",
+    "section": "宝剑皇后",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "皇后"
+    },
+    "image": "/assets/cards/card-40.jpg",
+    "page": 75
+  },
+  {
+    "id": "card-41",
+    "name": "宝剑国王",
+    "section": "宝剑国王",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "宝剑",
+      "rank": "国王"
+    },
+    "image": "/assets/cards/card-41.jpg",
+    "page": 76
+  },
+  {
+    "id": "card-42",
+    "name": "五角星王牌",
+    "section": "五角星王牌",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "王牌"
+    },
+    "image": "/assets/cards/card-42.jpg",
+    "page": 83
+  },
+  {
+    "id": "card-43",
+    "name": "五角星二",
+    "section": "五角星二",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "二"
+    },
+    "image": "/assets/cards/card-43.jpg",
+    "page": 84
+  },
+  {
+    "id": "card-44",
+    "name": "五角星三",
+    "section": "五角星三",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "三"
+    },
+    "image": "/assets/cards/card-44.jpg",
+    "page": 85
+  },
+  {
+    "id": "card-45",
+    "name": "五角星四",
+    "section": "五角星四",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "四"
+    },
+    "image": "/assets/cards/card-45.jpg",
+    "page": 86
+  },
+  {
+    "id": "card-46",
+    "name": "五角星五",
+    "section": "五角星五",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "五"
+    },
+    "image": "/assets/cards/card-46.jpg",
+    "page": 88
+  },
+  {
+    "id": "card-47",
+    "name": "五角星六",
+    "section": "五角星六",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "六"
+    },
+    "image": "/assets/cards/card-47.jpg",
+    "page": 89
+  },
+  {
+    "id": "card-48",
+    "name": "五角星七",
+    "section": "五角星七",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "七"
+    },
+    "image": "/assets/cards/card-48.jpg",
+    "page": 90
+  },
+  {
+    "id": "card-49",
+    "name": "五角星八",
+    "section": "五角星八",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "八"
+    },
+    "image": "/assets/cards/card-49.jpg",
+    "page": 92
+  },
+  {
+    "id": "card-50",
+    "name": "五角星九",
+    "section": "五角星九",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "九"
+    },
+    "image": "/assets/cards/card-50.jpg",
+    "page": 93
+  },
+  {
+    "id": "card-51",
+    "name": "五角星十",
+    "section": "五角星十",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "十"
+    },
+    "image": "/assets/cards/card-51.jpg",
+    "page": 94
+  },
+  {
+    "id": "card-52",
+    "name": "五角星侍卫",
+    "section": "五角星侍卫",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "侍卫"
+    },
+    "image": "/assets/cards/card-52.jpg",
+    "page": 96
+  },
+  {
+    "id": "card-53",
+    "name": "五角星骑士",
+    "section": "五角星骑士",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "骑士"
+    },
+    "image": "/assets/cards/card-53.jpg",
+    "page": 97
+  },
+  {
+    "id": "card-54",
+    "name": "五角星皇后",
+    "section": "五角星皇后",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "皇后"
+    },
+    "image": "/assets/cards/card-54.jpg",
+    "page": 98
+  },
+  {
+    "id": "card-55",
+    "name": "五角星国王",
+    "section": "五角星国王",
+    "metadata": {
+      "arcana": "小阿尔克纳",
+      "suit": "五角星",
+      "rank": "国王"
+    },
+    "image": "/assets/cards/card-55.jpg",
+    "page": 100
+  },
+  {
+    "id": "card-56",
+    "name": "愚人",
+    "section": "0愚人（The Fool）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 0,
+      "name": "愚人"
+    },
+    "image": "/assets/cards/card-56.jpg",
+    "page": 107
+  },
+  {
+    "id": "card-57",
+    "name": "魔术师",
+    "section": "1魔术师（The Magician）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 1,
+      "name": "魔术师"
+    },
+    "image": "/assets/cards/card-57.jpg",
+    "page": 109
+  },
+  {
+    "id": "card-58",
+    "name": "女教皇",
+    "section": "2女教皇（The High Priestess）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 2,
+      "name": "女教皇"
+    },
+    "image": "/assets/cards/card-58.jpg",
+    "page": 111
+  },
+  {
+    "id": "card-59",
+    "name": "女皇",
+    "section": "3女皇（The Empress）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 3,
+      "name": "女皇"
+    },
+    "image": "/assets/cards/card-59.jpg",
+    "page": 112
+  },
+  {
+    "id": "card-60",
+    "name": "皇帝",
+    "section": "4皇帝（The Emperor）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 4,
+      "name": "皇帝"
+    },
+    "image": "/assets/cards/card-60.jpg",
+    "page": 114
+  },
+  {
+    "id": "card-61",
+    "name": "教皇",
+    "section": "5教皇（The Hierophant）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 5,
+      "name": "教皇"
+    },
+    "image": "/assets/cards/card-61.jpg",
+    "page": 115
+  },
+  {
+    "id": "card-62",
+    "name": "恋人",
+    "section": "6恋人（The lovers）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 6,
+      "name": "恋人"
+    },
+    "image": "/assets/cards/card-62.jpg",
+    "page": 117
+  },
+  {
+    "id": "card-63",
+    "name": "战车",
+    "section": "7战车（The Chariot）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 7,
+      "name": "战车"
+    },
+    "image": "/assets/cards/card-63.jpg",
+    "page": 119
+  },
+  {
+    "id": "card-64",
+    "name": "力量",
+    "section": "8力量（Strength）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 8,
+      "name": "力量"
+    },
+    "image": "/assets/cards/card-64.jpg",
+    "page": 120
+  },
+  {
+    "id": "card-65",
+    "name": "隐士",
+    "section": "9隐士（The Hermit）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 9,
+      "name": "隐士"
+    },
+    "image": "/assets/cards/card-65.jpg",
+    "page": 122
+  },
+  {
+    "id": "card-66",
+    "name": "命运之轮",
+    "section": "10命运之轮（The Wheel of Fortune）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 10,
+      "name": "命运之轮"
+    },
+    "image": "/assets/cards/card-66.jpg",
+    "page": 123
+  },
+  {
+    "id": "card-67",
+    "name": "正义",
+    "section": "11正义（Justice）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 11,
+      "name": "正义"
+    },
+    "image": "/assets/cards/card-67.jpg",
+    "page": 126
+  },
+  {
+    "id": "card-68",
+    "name": "悬吊者",
+    "section": "12悬吊者（The Hanged Man）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 12,
+      "name": "悬吊者"
+    },
+    "image": "/assets/cards/card-68.jpg",
+    "page": 127
+  },
+  {
+    "id": "card-69",
+    "name": "死亡",
+    "section": "13死亡（Death）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 13,
+      "name": "死亡"
+    },
+    "image": "/assets/cards/card-69.jpg",
+    "page": 129
+  },
+  {
+    "id": "card-70",
+    "name": "节制",
+    "section": "14节制（Temperance）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 14,
+      "name": "节制"
+    },
+    "image": "/assets/cards/card-70.jpg",
+    "page": 131
+  },
+  {
+    "id": "card-71",
+    "name": "魔鬼",
+    "section": "15魔鬼（The Devil）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 15,
+      "name": "魔鬼"
+    },
+    "image": "/assets/cards/card-71.jpg",
+    "page": 133
+  },
+  {
+    "id": "card-72",
+    "name": "高塔",
+    "section": "16高塔（The Tower）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 16,
+      "name": "高塔"
+    },
+    "image": "/assets/cards/card-72.jpg",
+    "page": 135
+  },
+  {
+    "id": "card-73",
+    "name": "星星",
+    "section": "17星星（The Star）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 17,
+      "name": "星星"
+    },
+    "image": "/assets/cards/card-73.jpg",
+    "page": 137
+  },
+  {
+    "id": "card-74",
+    "name": "月亮",
+    "section": "18月亮（The Moon）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 18,
+      "name": "月亮"
+    },
+    "image": "/assets/cards/card-74.jpg",
+    "page": 139
+  },
+  {
+    "id": "card-75",
+    "name": "太阳",
+    "section": "19太阳（The Sun）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 19,
+      "name": "太阳"
+    },
+    "image": "/assets/cards/card-75.jpg",
+    "page": 140
+  },
+  {
+    "id": "card-76",
+    "name": "审判",
+    "section": "20审判（Judgement）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 20,
+      "name": "审判"
+    },
+    "image": "/assets/cards/card-76.jpg",
+    "page": 142
+  },
+  {
+    "id": "card-77",
+    "name": "世界",
+    "section": "21世界（The World）",
+    "metadata": {
+      "arcana": "大阿尔克纳",
+      "number": 21,
+      "name": "世界"
+    },
+    "image": "/assets/cards/card-77.jpg",
+    "page": 145
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "starlit-cabin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three.js tarot cabin with source-grounded DeepSeek readings",
+  "scripts": {"test:e2e": "node cabin/check_immersive.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

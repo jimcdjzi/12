@@ -1,0 +1,3 @@
+/* Keep the room at a readable size when the reading grows down the page. */
+@media (min-width:801px){.room{position:sticky;top:0;align-self:start;height:calc(100svh - 94px);min-height:760px;max-height:1100px}}
+@media (max-width:800px){.room-intro{padding-right:18px;background:linear-gradient(90deg,#13172388,transparent);border-radius:20px}.room-intro p{text-shadow:0 1px 6px #080b14}}
