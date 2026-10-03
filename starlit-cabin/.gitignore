@@ -20,3 +20,5 @@ cabin/*result.json
 cabin/web/assets/cards/
 .DS_Store
 Thumbs.db
+publish-12/
+cabin/*.log

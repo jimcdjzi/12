@@ -91,12 +91,14 @@ def new_session(question, spread):
 def public(data):
     result = {k: data[k] for k in ('token', 'question', 'spread', 'created', 'commitment', 'draws', 'status', 'reading')}
     result['positions'] = SPREADS[data['spread']]
+    if data['reading']:
+        result['reading'] = {**data['reading'], 'can_retry': GENERATOR in ('deepseek', 'codex') and data['reading']['mode'] != 'model'}
     if len(data['draws']) == len(result['positions']):
         result['proof'] = data['proof']
     return result
 
 
-def mutate(token, action=None, index=None):
+def mutate(token, action=None, index=None, retry=False):
     with connect() as db:
         db.execute('BEGIN IMMEDIATE')
         row = db.execute('SELECT body FROM sessions WHERE token=?', (token,)).fetchone()
@@ -118,7 +120,8 @@ def mutate(token, action=None, index=None):
         if action == 'interpret':
             if data['status'] == 'drawing':
                 raise ValueError('请先完成抽牌。')
-            if data['status'] in ('interpreting', 'complete'):
+            may_retry = retry and data['status'] == 'complete' and GENERATOR in ('deepseek', 'codex') and data['reading'] and data['reading']['mode'] != 'model'
+            if data['status'] == 'interpreting' or (data['status'] == 'complete' and not may_retry):
                 return public(data)
             data['status'] = 'interpreting'
         if action:
@@ -281,7 +284,10 @@ class Handler(BaseHTTPRequestHandler):
                 if not match:
                     self.send(404, {'error': '未找到接口。'})
                     return
-                self.send(200, mutate(match[1], match[2], data.get('index')))
+                retry = data.get('retry', False)
+                if type(retry) is not bool:
+                    raise ValueError('重试标记格式不正确。')
+                self.send(200, mutate(match[1], match[2], data.get('index'), retry))
         except KeyError as e:
             self.send(404, {'error': e.args[0]})
         except (ValueError, TypeError, UnicodeError) as e:

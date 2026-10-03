@@ -8,3 +8,9 @@ html,body{height:100%;overflow:hidden}body{background:#10131c}main{display:block
 .room:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 43%,transparent 35%,#090c1b70 100%);z-index:0}.reading-card>p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}.source-text{display:block!important}.room-locations{z-index:40}
 @media(max-width:800px){.card-fan{inset:24svh 4vw 22svh;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(10,minmax(0,1fr));gap:5px 4px}.card-fan .card-back{width:100%;aspect-ratio:auto;border:0;box-shadow:none;background:none}.card-fan .card-back:before{inset:0 auto 0 50%;width:auto;height:100%;aspect-ratio:172/310;transform:translateX(-50%);border:1px solid #c0a369;border-radius:3px;background:linear-gradient(145deg,#51415e,#242637);box-shadow:2px 3px 6px #0008}.card-fan .card-back:after{font-size:11px}.card-fan .card-back.selected{opacity:.12}#journey-subtitle{display:block;line-height:1.6}}
 @media(prefers-reduced-motion:reduce){.object-guide,.room-locations button.guided:after{animation:none!important}}
+/* Radio controls participate in layout; their hit areas cannot cover nearby fields. */
+.spread-option input{position:static;inset:auto;opacity:1;width:15px;height:15px;flex:0 0 15px;margin:0;accent-color:var(--gold)}
+.spread-option .radio-mark{display:none}
+.spread-option{min-height:46px}
+.journal-panel .notice{visibility:visible}
+#retry-reading{border:1px solid #c7aa6c66;border-radius:6px;padding:8px 12px;margin:6px 0 12px;display:block}

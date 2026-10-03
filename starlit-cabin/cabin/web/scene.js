@@ -76,12 +76,18 @@ const dustGeometry=new THREE.BufferGeometry();dustGeometry.setAttribute('positio
 function glowTexture(){const c=document.createElement('canvas');c.width=c.height=128;const ctx=c.getContext('2d');const g=ctx.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,'rgba(243,210,159,.55)');g.addColorStop(.3,'rgba(173,132,242,.20)');g.addColorStop(1,'rgba(133,97,220,0)');ctx.fillStyle=g;ctx.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);}
 const glowMap=glowTexture();
 const halos=[];
-for(const [group,name,xyz,size] of [[crystal,'crystal',[0,.6,0],2.5],[deck,'deck',[0,.3,0],1.5],[books,'books',[0,2,.6],2.2],[journal,'journal',[0,.12,0],1.2]]){const material=new THREE.SpriteMaterial({map:glowMap,transparent:true,opacity:.23,depthWrite:false,blending:THREE.AdditiveBlending});const halo=new THREE.Sprite(material);halo.position.set(...xyz);halo.scale.set(size,size,1);group.add(halo);halos.push({halo,name});}
+for(const [group,name,xyz,size] of [[crystal,'crystal',[0,.6,0],2.5],[deck,'deck',[0,.3,0],1.5],[books,'books',[0,2,.6],2.2],[journal,'journal',[0,.12,0],1.2]]){const material=new THREE.SpriteMaterial({map:glowMap,transparent:true,opacity:.23,depthWrite:false,blending:THREE.AdditiveBlending});const halo=new THREE.Sprite(material);halo.position.set(...xyz);halo.scale.set(size,size,1);halo.raycast=()=>{};group.add(halo);halos.push({halo,name});}
 const deckLight=new THREE.PointLight(0xe5c38c,0,3,2);deckLight.position.set(.3,2,1.1);world.add(deckLight);
 const bookLight=new THREE.PointLight(0xc6a4ef,3,4,2);bookLight.position.set(-2.6,2.5,-1.6);world.add(bookLight);
 // A wider velvet tabletop receives the 78-card spread; it retracts after selection.
 const spreadCloth=box(8,.022,7,mat(0x2d253e),.3,1.43,.4);spreadCloth.visible=false;
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let mouseX=0,mouseY=0,view=document.body.dataset.stage||'home';
+export function interactionPoint(name){
+  const group=objects.find(o=>o.userData.action===name);if(!group)return null;
+  const local=new THREE.Vector3(0,name==='crystal'?.6:name==='deck'?.22:name==='books'?2:.1,0);
+  group.localToWorld(local);local.project(camera);
+  return {x:(local.x*.5+.5)*room.clientWidth,y:(-local.y*.5+.5)*room.clientHeight};
+}
 let transitionStart=performance.now(),duration=1100;
 const fromPosition=camera.position.clone(),fromTarget=target.clone(),lookTarget=target.clone(),goalPosition=new THREE.Vector3(),goalTarget=new THREE.Vector3();
 function goals(){const narrow=room.clientWidth<700;const ratio=room.clientWidth/room.clientHeight;

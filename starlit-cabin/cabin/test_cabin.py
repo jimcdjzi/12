@@ -8,6 +8,7 @@ import time
 import unittest
 import urllib.request
 import urllib.error
+from unittest.mock import patch
 import server
 
 
@@ -114,6 +115,42 @@ class CabinTests(unittest.TestCase):
         status, result = self.request('/api/knowledge?q=' + urllib.parse.quote('愚人逆位'))
         self.assertEqual(status, 200)
         self.assertIn('PDF', result['answer'])
+
+    def test_failed_generation_can_retry_without_redrawing(self):
+        previous = server.GENERATOR
+        server.GENERATOR = 'deepseek'
+        try:
+            s = self.create('single')
+            _, drawn = self.request(f"/api/sessions/{s['token']}/draw", {'index': 17})
+            def wait_done():
+                for _ in range(100):
+                    current = self.request('/api/sessions/' + s['token'])[1]
+                    if current['status'] == 'complete':
+                        return current
+                    time.sleep(.1)
+                self.fail('generation did not complete')
+            with patch.object(server, 'deepseek_answer', side_effect=server.GenerationError('provider_http_402')) as failed:
+                self.request(f"/api/sessions/{s['token']}/interpret", {})
+                current = wait_done()
+                self.assertEqual(current['reading']['mode'], 'evidence')
+                self.assertTrue(current['reading']['can_retry'])
+                self.request(f"/api/sessions/{s['token']}/interpret", {})
+                self.assertEqual(failed.call_count, 1)
+            def answer(question, fixed, hits):
+                page = hits[0]['record']['source']['pdf_pages'][0]
+                return f'书中认为，可以借此认识自己的感受。（PDF 第{page}页）'
+            with patch.object(server, 'deepseek_answer', side_effect=answer) as succeeded:
+                self.request(f"/api/sessions/{s['token']}/interpret", {'retry': True})
+                current = wait_done()
+                self.assertEqual(current['reading']['mode'], 'model')
+                self.assertFalse(current['reading']['can_retry'])
+                self.assertEqual(current['draws'], drawn['draws'])
+                self.assertEqual(current['commitment'], drawn['commitment'])
+                self.request(f"/api/sessions/{s['token']}/interpret", {'retry': True})
+                self.assertEqual(succeeded.call_count, 1)
+            self.assertEqual(self.request(f"/api/sessions/{s['token']}/interpret", {'retry': 'yes'})[0], 400)
+        finally:
+            server.GENERATOR = previous
 
 
 if __name__ == '__main__':

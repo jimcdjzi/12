@@ -10,7 +10,7 @@ explicit = ['.gitignore', '.env.example', 'README.md', 'requirements.txt', 'pack
             'build_tarot_jsonl.py', 'tarot_rag.py', 'prepare_release.py',
             '.github/workflows/test.yml', 'cabin/README.md', 'cabin/cards.json',
             'cabin/server.py', 'cabin/llm.py', 'cabin/prepare_assets.py', 'cabin/compose_music.py',
-            'cabin/test_llm.py', 'cabin/test_cabin.py', 'cabin/check_immersive.cjs', 'cabin/启动小屋.ps1']
+            'cabin/test_llm.py', 'cabin/test_cabin.py', 'cabin/check_immersive.cjs', 'cabin/check_bugfixes.cjs', 'cabin/启动小屋.ps1']
 files = [ROOT / name for name in explicit if (ROOT / name).is_file()]
 files += [p for p in (ROOT / 'cabin/web').rglob('*') if p.is_file() and 'assets/cards/' not in p.relative_to(ROOT / 'cabin/web').as_posix()]
 for file in files:

@@ -59,4 +59,6 @@ python tarot_rag.py eval --strict
 
 可选浏览器验证：安装 Node.js，执行 `npm install`、`npx playwright install chromium`；启动已配置模型的服务后运行 `npm run test:e2e`。该检查会创建测试牌局并实际调用模型。也可设置 `BROWSER_CHANNEL=msedge` 使用已安装的 Edge。
 
+`cabin/check_bugfixes.cjs` 覆盖实际三维家具点击、单张/三张牌阵切换、78 张牌展开和延迟请求的恢复。综合解读响应使用测试模拟，不调用外部模型；需要先导入本地资料并启动服务。默认使用 Edge，也可通过 `BROWSER_CHANNEL` 指定浏览器。
+
 当前服务面向本机开发，仅绑定 `127.0.0.1`。上传 GitHub 是发布源码，不等于网站已上线。公开托管需要进一步配置身份认证、HTTPS、限流、资料使用范围与数据保留策略。
